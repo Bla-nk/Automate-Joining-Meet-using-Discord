@@ -20,6 +20,6 @@ async def on_message(message):
     if 'https://meet.google.com/' in message.content.lower():
         await message.channel.send('Recieved')
         sub=message.content
-
+        print(sub)
         meetjoin()
 bot.run(TOKEN)
