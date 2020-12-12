@@ -14,7 +14,6 @@ opt.add_experimental_option("prefs", {
 })
 sub=0
 def meetjoin():
-    sub='https://meet.google.com/duj-rzwc-afd'
     browser = webdriver.Chrome(chrome_options=opt, executable_path=r'C:\Users\91748\Downloads\chromedriver')
     browser.get('https://accounts.google.com/signin/v2/identifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin')
     time.sleep(5)
