@@ -6,14 +6,15 @@ from selenium.webdriver.chrome.options import Options
 with open('id-pass.json') as json_file:
     idpass = json.load(json_file)
 opt=Options()
-opt.add_experimental_option("prefs", {
+#1 for allow and 2 for block.
+'''opt.add_experimental_option("prefs", {
 "profile.default_content_setting_values.media_stream_mic": 1,
 "profile.default_content_setting_values.media_stream_camera": 1,
 "profile.default_content_setting_values.geolocation": 2,
 "profile.default_content_setting_values.notifications": 1
-})
-sub=0
-def meetjoin():
+})'''
+
+def meetjoin(sub):
     browser = webdriver.Chrome(chrome_options=opt, executable_path=r'C:\Users\91748\Downloads\chromedriver')
     browser.get('https://accounts.google.com/signin/v2/identifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin')
     time.sleep(5)
